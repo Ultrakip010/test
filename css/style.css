@@ -97,11 +97,23 @@ nav a:hover {
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
+    /* Reveal animation initial state */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.product-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .product-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
+}
+
+.product-item.revealed:hover {
+    transform: translateY(-8px);
 }
 
 .product-item img {
